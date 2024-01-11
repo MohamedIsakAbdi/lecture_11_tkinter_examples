@@ -1,0 +1,1 @@
+print('SHOPPING LIST'.center(20, '='))
