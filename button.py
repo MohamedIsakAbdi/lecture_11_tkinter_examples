@@ -2,7 +2,8 @@ import tkinter
 import tkinter.messagebox as msg
 
 top = tkinter.Tk() 
-
+top.geometry("200x100")
+top.config(bg="blue")
 def helloCallBack(): 
     msg.showinfo( "Hello Python", 
     "Hello World") 
