@@ -1,19 +1,30 @@
 from tkinter import *
 
-top = Tk() 
+def display_hello():
+    username = E1.get()
+    result_label.config(text=f"Hello {username}!")
 
-# Set the size of the main window
-top.geometry("300x200")  # Width x Height
+top = Tk()
+
+top.geometry("300x200")
 top.config(bg="black")
-# Create a frame with a specific size and padding
 
-frame = Frame(top,  padx=10, pady=10)
-frame.pack_propagate(False)  # This prevents the frame from resizing to fit its contents
+frame = Frame(top, padx=10, pady=10)
+frame.pack_propagate(False)
 frame.pack()
 
-L1 = Label(top, text="User Name", fg="white",  bg="black", font=("arial",25)) 
-L1.pack() 
-E1 = Entry(top, bd =5) 
+L1 = Label(top, text="User Name", fg="white", bg="black", font=("arial", 25))
+L1.pack()
+
+E1 = Entry(top, bd=5)
 E1.pack()
+
+# Button to display "Hello" in the Entry widget
+hello_button = Button(top, text="Say Hello", command=display_hello, bg="blue", fg="white")
+hello_button.pack()
+
+# Label to display the result
+result_label = Label(top, text="", fg="white", bg="black", font=("arial", 12))
+result_label.pack()
 
 top.mainloop()
