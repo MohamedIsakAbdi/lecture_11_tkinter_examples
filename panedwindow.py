@@ -40,10 +40,10 @@ m2.add(top_pane)
 bottom = Label(m2, text="bottom pane") 
 m2.add(bottom) 
 
-# labelframe = LabelFrame(top, text="This is a LabelFrame") 
-# labelframe.pack(fill="both", expand="yes") 
-# left_label = Label(labelframe, text="Inside the LabelFrame") 
-# left_label.pack() 
+labelframe = LabelFrame(top, text="This is a LabelFrame") 
+labelframe.pack(fill="both", expand="yes") 
+left_label = Label(labelframe, text="Inside the LabelFrame") 
+left_label.pack() 
 
 
 top.mainloop()

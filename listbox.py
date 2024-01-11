@@ -1,15 +1,17 @@
-import tkinter
 from tkinter import *
 
-top = tkinter.Tk() 
+top = Tk() 
 
 # Set the size of the main window
-top.geometry("800x600")  # Width x Height
+top.geometry("400x300")  # Width x Height
+top.config(bg="orange") # set background color for main window
 
 # Create a frame with a specific size and padding
 frame_width = 200
 frame_height = 50
-frame = tkinter.Frame(top, width=frame_width, height=frame_height, padx=10, pady=10)
+instruction_label = Label(text="List Box", fg="white", font=("arial"),15)
+instruction_label.pack(pady=12)
+frame = Frame(top, padx=10, pady=10)
 frame.pack_propagate(False)  # This prevents the frame from resizing to fit its contents
 frame.pack()
 

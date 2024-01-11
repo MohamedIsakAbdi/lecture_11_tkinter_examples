@@ -1,27 +1,25 @@
 from tkinter import *
 
-def display_hello():
-    username = E1.get()
-    result_label.config(text=f"Hello {username}!")
 
 top = Tk()
-
 top.geometry("300x200")
-top.config(bg="black")
+top.config(bg="orange")
 
-frame = Frame(top, padx=10, pady=10)
-frame.pack_propagate(False)
-frame.pack()
+def display_hello():
+    username = Entry(top,text="")
+    # username = E1.get()
+    result_label.config(text=f"Hello {username}!",bg="orange")
+    
 
-L1 = Label(top, text="User Name", fg="white", bg="black", font=("arial", 25))
+L1 = Label(top, text="User Name", fg="white", bg="orange", font=("arial", 20))
 L1.pack()
 
-E1 = Entry(top, bd=5)
+E1 = Entry(top,text="", bd=5)
 E1.pack()
 
 # Button to display "Hello" in the Entry widget
-hello_button = Button(top, text="Say Hello", command=display_hello, bg="blue", fg="white")
-hello_button.pack()
+hello_button = Button(top, text="Say Hello", command=display_hello, bg="yellow", fg="blue")
+hello_button.pack(pady=10)
 
 # Label to display the result
 result_label = Label(top, text="", fg="white", bg="black", font=("arial", 12))
